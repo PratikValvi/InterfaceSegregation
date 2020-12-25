@@ -20,9 +20,15 @@ public class Application {
         birdsList.add(penguin);
 
         for (Birds bird : birdsList) {
-            bird.fly();
-            bird.eat();
+            System.out.println(bird.getClass());
+            if (bird instanceof Flyable) {
+                ((Flyable) bird).fly();
+            }
+            if (bird instanceof Eatable) {
+                ((Eatable) bird).eat();
+            }
             bird.speak();
+            System.out.println();
         }
     }
 }

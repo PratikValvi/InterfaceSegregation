@@ -1,16 +1,17 @@
-public class Pheonix implements Birds {
+public class Pheonix implements Birds,Eatable,Flyable {
+
     @Override
-    public void fly() {
-        System.out.println(Pheonix.class.getName() + " is Flying");
+    public void speak() {
+        System.out.println(Pheonix.class.getName() + " is speaking");
     }
 
     @Override
     public void eat() {
-        System.out.println(Pheonix.class.getName() + " is Eating");
+        System.out.println(Pheonix.class.getName() + " is eating");
     }
 
     @Override
-    public void speak() {
-        System.out.println(Pheonix.class.getName() + " is Speaking");
+    public void fly() {
+        System.out.println(Pheonix.class.getName() + " is flying");
     }
 }
