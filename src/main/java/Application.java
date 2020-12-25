@@ -1,18 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Application {
     public static void main(String[] args) {
+        List<Birds> birdsList = new ArrayList<>();
         Birds crow = new Crow();
-        crow.fly();
-        crow.eat();
-        crow.speak();
+        birdsList.add(crow);
 
         Birds parrot = new Parrot();
-        parrot.fly();
-        parrot.eat();
-        parrot.speak();
+        birdsList.add(parrot);
 
         Birds pheonix = new Pheonix();
-        pheonix.fly();
-        pheonix.eat();
-        pheonix.speak();
+        birdsList.add(pheonix);
+
+        Birds toybird = new ToyBird();
+        birdsList.add(toybird);
+
+        Birds penguin = new Penguin();
+        birdsList.add(penguin);
+
+        for (Birds bird : birdsList) {
+            bird.fly();
+            bird.eat();
+            bird.speak();
+        }
     }
 }
